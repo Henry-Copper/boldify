@@ -26,22 +26,27 @@
 def get_file_names():
 	from argparse import ArgumentParser
 	parser = ArgumentParser(
-			prog='python boldify.py',
-			description='Make the first 3 characters of every word in a file \
-					bold',
-			epilog='CC0. No rights reserved.')
-	parser.add_argument('-if',
-				nargs=1,
-				metavar='input file',
-				dest='infile',
-				default=None, 
-				help='Specify the full path of the input file')
-	parser.add_argument('-of',
-				nargs=1,
-				metavar='output file',
-				dest='outfile',
-				default=None,
-				help='Specify the full path of the output file') 
+				prog='python boldify.py',
+				description='Make the first 3 characters of every word in a file \
+						bold',
+				epilog='CC0. No rights reserved.'
+				)
+	parser.add_argument(
+			'-if',
+			nargs=1,
+			metavar='input file',
+			dest='infile',
+			default=None, 
+			help='Specify the full path of the input file'
+			)
+	parser.add_argument(
+			'-of',
+			nargs=1,
+			metavar='output file',
+			dest='outfile',
+			default=None,
+			help='Specify the full path of the output file'
+			) 
 	args = parser.parse_args()
 	
 	if (infile := args.infile) == None:
